@@ -27,7 +27,7 @@ compile: | default_preamble.tex
 	@-[[ -f $(BASENAME).tex ]] && ! command grep -Eq '\\input\{default_preamble(\.tex)?\}' $(BASENAME).tex && sed -i '2i\\\input{default_preamble.tex}' $(BASENAME).tex
 	$(LATEX_ENGINE) $(LATEX_FLAGS) $(BASENAME).tex
 	$(BIB_PROCESSOR) $(BASENAME)
-	@-[[ -f default_glossary_entries.tex ]] && makeglossaries $(BASENAME)
+	@-[[ -f $(BASENAME).glo || -f $(BASENAME).acn || -f $(BASENAME).acr ]] && makeglossaries $(BASENAME)
 	# If you leave these two line commented, you need to build it twice every time you change a \cite entry. On the other hand, it gets faster
 	# $(LATEX_ENGINE) $(LATEX_FLAGS) $(BASENAME).tex
 	# $(LATEX_ENGINE) $(LATEX_FLAGS) $(BASENAME).tex
