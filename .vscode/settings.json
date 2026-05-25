@@ -2,5 +2,26 @@
 // you should put it in ./.vscode/settings.json
 {
     "latex-workshop.latex.external.build.command": "make",
-    "cSpell.language": "en,pt,pt-BR"
+    "cSpell.language": "en,pt,pt-BR",
+    "cSpell.maxNumberOfProblems": 5000,
+    "cSpell.words": [
+        "Adrià",
+        "Cursi",
+        "Elsevier's",
+        "Fohlmeister",
+        "Friederike",
+        "García",
+        "Gosset",
+        "Kacou",
+        "LABCONVEX",
+        "LABRF",
+        "Marielle",
+        "Modeste",
+        "MPAP",
+        "PPGEEC",
+        "PPGETI",
+        "PROGESP",
+        "Rovira",
+        "Tarcisio"
+    ]
 }
